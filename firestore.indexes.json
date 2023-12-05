@@ -1,6 +1,4 @@
 {
-  "indexes": [
-"./index.html",
-  ],
+  "indexes": [],
   "fieldOverrides": []
 }
