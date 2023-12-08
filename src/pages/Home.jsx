@@ -1,4 +1,6 @@
 import Modal from 'react-modal';
+
+import { Outlet, Link } from "react-router-dom";
 import { useState } from 'react';
 import { HiOutlineTemplate } from "react-icons/hi";
 import { CgMusicNote } from "react-icons/cg";
@@ -6,7 +8,6 @@ import { TbDeviceMobileCode } from "react-icons/tb";
 import { BiNetworkChart } from "react-icons/bi";
 import { AiOutlineCalendar, AiOutlineCode, AiFillGithub } from "react-icons/ai";
 import { FaCode, FaGitAlt, FaXTwitter, FaLinkedinIn, FaDiscord } from "react-icons/fa6";
-import GithubAuthButton from '../Components/GithubAuthButton'
 Modal.setAppElement('#root');
 
 const customStyles = {
@@ -32,7 +33,6 @@ function MyModal(){
 		style={customStyles}
 		
       >
-        <GithubAuthButton />
 	  </Modal>
     
 	);
@@ -59,19 +59,27 @@ function MyModal(){
 	  <div className="mt-5 rounded-3xl bg-indigo-600 bg-opacity-10 grid grid-cols-2 gap-4 md:grid-cols-8 md:gap-2  md:p-24 ">
       
 	       <div className=" m-3 md:m-5 flex flex-col justify-center items-center cursor-pointer hover:text-[grey]  ">
-        <HiOutlineTemplate size={80} onClick={openModal}/>
-        <p className="text-center text-txl">Web</p>
-        </div>
+        <HiOutlineTemplate size={80} />
+
+            <Link to="/web">
+	  <p className="text-center text-txl">Web</p>
+      </Link>
+
+	  </div>
  
         <div className="m-3 md:m-5  cursor-pointer hover:text-[grey]">
         <CgMusicNote size={80}/>
         <p className="text-center text-txl">Music</p>
         </div>
 
+
+
+            <Link to="/app">
         <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]">
         <TbDeviceMobileCode size={80}/>
         <p className="text-center text-txl">Mobile</p>
         </div>
+</Link>
 
         <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]">
           <a href="/network">
@@ -104,10 +112,7 @@ function MyModal(){
       
  
 
-<div className='flex justify-center items-center absolute place-items-center'>
-<MyModal />
 
-      </div>
 
 
 <div className="flex flex-row ">
