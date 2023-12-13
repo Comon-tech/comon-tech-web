@@ -1,6 +1,6 @@
 import { React, useState }  from 'react';
 import {signInWithGitHub, signInWithGoogle, signOutWithGoogle} from '../firebase';
-import { useHistory } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 const Login = () => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -11,7 +11,7 @@ const Login = () => {
       signInWithGoogle();
       setAuthenticated(true);
       localStorage.setItem('authenticated', 'true');
-      history.push('/home'); //
+      redirect('/home'); //
     } catch (error) {
       console.error('Error signing in with Google:', error);
       // Handle error as needed
@@ -57,11 +57,11 @@ const Login = () => {
             <p className="text-xl font-bold mb-4">Your Awesome Login Page</p>
     
 
-            <button className="bg-white mt-5 text-fuchsia-900 py-2 px-4 rounded-full" onClick={signInWithGoogle}>Sign in with google</button>
+            <button className="bg-white mt-5 text-fuchsia-900 py-2 px-4 rounded-full" onClick={handleGoogleSignIn}>Sign in with google</button>
 
 {/* <button className="bg-black mt-5 text-white-900 py-2 px-4 rounded-full" onClick={signInWithGitHub} >Sign in with github</button> */}
 
-<button onClick={signOutWithGoogle}>SignOut</button>
+<button onClick={handleSignOut}>SignOut</button>
 
           </div>
 

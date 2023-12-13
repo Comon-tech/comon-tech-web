@@ -1,6 +1,7 @@
-import { React, useState }  from 'react';
+import { React, useState, useEffect }  from 'react';
 import {  Link } from "react-router-dom";
 
+import { redirect } from 'react-router-dom';
 
 const Layout = () => {
 
@@ -11,6 +12,9 @@ const Layout = () => {
     const storedAuth = localStorage.getItem('authenticated');
     if (storedAuth) {
       setAuthenticated(true);
+      redirect('/home'); //
+
+		console.log("User is authnticated")
     }
   }, []);
 
