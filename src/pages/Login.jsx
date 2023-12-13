@@ -1,6 +1,6 @@
 import { React, useState }  from 'react';
 import {signInWithGitHub, signInWithGoogle, signOutWithGoogle} from '../firebase';
-
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
   const [authenticated, setAuthenticated] = useState(false);
@@ -11,6 +11,7 @@ const Login = () => {
       signInWithGoogle();
       setAuthenticated(true);
       localStorage.setItem('authenticated', 'true');
+      history.push('/home'); //
     } catch (error) {
       console.error('Error signing in with Google:', error);
       // Handle error as needed
