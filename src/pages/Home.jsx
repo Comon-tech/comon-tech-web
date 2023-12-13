@@ -10,16 +10,6 @@ import { AiOutlineCalendar, AiOutlineCode, AiFillGithub } from "react-icons/ai";
 import { FaCode, FaGitAlt, FaXTwitter, FaLinkedinIn, FaDiscord, FaGamepad } from "react-icons/fa6";
 Modal.setAppElement('#root');
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
 function Home() {
   const [modalIsOpen, setIsOpen] = useState(false);
 
@@ -47,7 +37,13 @@ function MyModal(){
   }
 
   return (
-    <main className="bg-gradient-to-r from-slate-950 to-fuchsia-900 md:h-[100vh] text-[white] flex  flex-col md:items-center  md:p-24">
+    <div className="min-h-screen flex flex-col bg-gradient-to-r from-slate-950 to-fuchsia-900 text-white p-5">
+     <nav className=" p-4">
+        <div className="container mx-auto">
+        <a href="/" className="text-white font-bold text-xl">ComonTech</a>
+        </div>
+      </nav>
+
       <div className=" place-items-center ">
       <h1 className="text-5xl">COMON Tech</h1>
       <p className="text-center text-txl m-5">Chose a Category</p>
@@ -55,7 +51,7 @@ function MyModal(){
       </div>
 
 
-	  <div className="mt-5 rounded-3xl bg-indigo-600 bg-opacity-10 grid grid-cols-2 gap-4 md:grid-cols-8 md:gap-2  md:p-24 ">
+	  <div className="mt-5 text-center rounded-3xl bg-indigo-600 bg-opacity-10 grid grid-cols-2 gap-4 md:grid-cols-8 md:gap-2  md:p-4 ">
       
 	       <div className=" m-3 md:m-5 flex flex-col justify-center items-center cursor-pointer hover:text-[grey]  ">
             <Link to="/web">
@@ -126,7 +122,7 @@ function MyModal(){
 
 
 
-<div className="flex flex-row ">
+<div className="flex flex-row text-center">
 
 <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]">
   <a href="https://github.com/Comon-tech">
@@ -150,12 +146,14 @@ function MyModal(){
           <a href="https://discord.gg/jhudAmVd">
         <FaDiscord size={23}/>
           </a>
- 
  </div>
 
-        
+       
 </div>
-	  	  </main>
+          <div className="container mx-auto text-center text-white">
+          &copy; 2023 Tech Community. All rights reserved.
+        </div>
+	  	  </div>
   )
 }
 

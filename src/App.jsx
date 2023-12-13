@@ -20,28 +20,23 @@ function App() {
 
 	  <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="home" element={<Home />} />
-          <Route path="web" element={<Web />} />
-          <Route path="game" element={<Game />} />
-          <Route path="app" element={<AppPage />} />
-          <Route path="network" element={<Network />} />
-          <Route path="events" element={<Events />} />
-          <Route path="terminal" element={<Terminal />} />
-          <Route path="code" element={<Code />} />
-          <Route path="git" element={<Git />} />
-	   <Route path="login" element={<Login />} />
-	  {/*    <Route path="*" element={<NoPage />} />
-        */}
-		</Route>
+
+        <Route path="/" element={<Layout />}/>
+        <Route path="/home" element={<Home />}/>
+          <Route path="/web" element={<Web />} />
+          <Route path="/game" element={<Game />} />
+          <Route path="/app" element={<AppPage />} />
+          <Route path="/network" element={<Network />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/terminal" element={<Terminal />} />
+          <Route path="/code" element={<Code />} />
+          <Route path="/git" element={<Git />} />
+          <Route path="/login" element={<Login />} />
     
       </Routes>
     </BrowserRouter>
 
   )
 }
-
-
-
 
 export default App
