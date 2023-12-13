@@ -1,13 +1,13 @@
 import Modal from 'react-modal';
 
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { HiOutlineTemplate } from "react-icons/hi";
-import { CgMusicNote } from "react-icons/cg";
+import { GrGamepad } from "react-icons/gr";
 import { TbDeviceMobileCode } from "react-icons/tb";
 import { BiNetworkChart } from "react-icons/bi";
 import { AiOutlineCalendar, AiOutlineCode, AiFillGithub } from "react-icons/ai";
-import { FaCode, FaGitAlt, FaXTwitter, FaLinkedinIn, FaDiscord } from "react-icons/fa6";
+import { FaCode, FaGitAlt, FaXTwitter, FaLinkedinIn, FaDiscord, FaGamepad } from "react-icons/fa6";
 Modal.setAppElement('#root');
 
 const customStyles = {
@@ -46,7 +46,6 @@ function MyModal(){
     setIsOpen(false);
   }
 
-
   return (
     <main className="bg-gradient-to-r from-slate-950 to-fuchsia-900 md:h-[100vh] text-[white] flex  flex-col md:items-center  md:p-24">
       <div className=" place-items-center ">
@@ -59,59 +58,71 @@ function MyModal(){
 	  <div className="mt-5 rounded-3xl bg-indigo-600 bg-opacity-10 grid grid-cols-2 gap-4 md:grid-cols-8 md:gap-2  md:p-24 ">
       
 	       <div className=" m-3 md:m-5 flex flex-col justify-center items-center cursor-pointer hover:text-[grey]  ">
+            <Link to="/web">
         <HiOutlineTemplate size={80} />
 
-            <Link to="/web">
 	  <p className="text-center text-txl">Web</p>
       </Link>
 
 	  </div>
  
         <div className="m-3 md:m-5  cursor-pointer hover:text-[grey]">
-        <CgMusicNote size={80}/>
-        <p className="text-center text-txl">Music</p>
+        <Link to="/game">
+        <GrGamepad size={80}/>
+        <p className="text-center text-txl">Game</p>
+        </Link>
         </div>
 
 
 
-            <Link to="/app">
         <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]">
+            <Link to="/app">
         <TbDeviceMobileCode size={80}/>
         <p className="text-center text-txl">Mobile</p>
+        </Link>
         </div>
-</Link>
 
         <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]">
-          <a href="/network">
+          <Link to="/network">
         <BiNetworkChart size={80}/>
         <p className="text-center text-txl">Network</p>
-          </a>
+        </ Link>
         </div>
 
         <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]">
+        <Link to="/events">
         <AiOutlineCalendar size={80}/>
         <p className="text-center text-txl">Events</p>
+        </Link>
+
         </div>
 
         <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]"> 
+        <Link to="/terminal">
         <AiOutlineCode size={80}/>
         <p className="text-center text-txl">Terminal</p>
+        </Link>
         </div>
 
         <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]">
+        <Link to="/code">
         <FaCode size={80}/>
         <p className="text-center text-txl">Code</p>
+        </Link>
+
         </div>
 
         <div className="m-3 md:m-5 cursor-pointer hover:text-[grey]">
+        <Link to="/git">
         <FaGitAlt size={80}/>
         <p className="text-center text-txl">Git</p>
+        </Link>
         </div>
         
       </div>
       
  
-
+    
 
 
 
