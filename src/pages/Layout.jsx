@@ -1,10 +1,19 @@
+import { React, useState }  from 'react';
 import {  Link } from "react-router-dom";
 import { useAuth } from './Login'
 
 
 const Layout = () => {
 
-  const { authenticated } = useAuth()
+  const [authenticated, setAuthenticated] = useState(false);
+
+  useEffect(() => {
+    // Check if the user is authenticated in localStorage
+    const storedAuth = localStorage.getItem('authenticated');
+    if (storedAuth) {
+      setAuthenticated(true);
+    }
+  }, []);
 
 
   return (
@@ -13,7 +22,7 @@ const Layout = () => {
       {/* Navigation Bar */}
       <nav className="bg-gradient-to-r from-slate-950 to-fuchsia-900 p-4">
         <div className="container mx-auto">
-          <a href="/" className="text-white font-bold text-xl">TComonTech</a>
+          <a href="/" className="text-white font-bold text-xl">ComonTech</a>
         </div>
       </nav>
 

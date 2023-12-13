@@ -1,25 +1,5 @@
-import { React, createContext, useContext, useState }  from 'react';
+import { React, useState }  from 'react';
 import {signInWithGitHub, signInWithGoogle, signOutWithGoogle} from '../firebase';
-
-const AuthContext = createContext();
-
-
-export const AuthProvider = ({ children }) => {
-  const [authenticated, setAuthenticated] = useState(false);
-
-  const handleGoogleSignIn = () => setAuthenticated(true);
-  const handleSignOut = () => setAuthenticated(false);
-
-  return (
-    <AuthContext.Provider value={{ authenticated, handleGoogleSignIn, handleSignOut }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
 
 
 const Login = () => {
@@ -28,8 +8,9 @@ const Login = () => {
    // Function to handle Google sign-in
    const handleGoogleSignIn = async () => {
     try {
-      await signInWithGoogle();
+      signInWithGoogle();
       setAuthenticated(true);
+      localStorage.setItem('authenticated', 'true');
     } catch (error) {
       console.error('Error signing in with Google:', error);
       // Handle error as needed
@@ -50,8 +31,9 @@ const Login = () => {
   // Function to handle sign-out
   const handleSignOut = async () => {
     try {
-      await signOutWithGoogle();
+      signOutWithGoogle();
       setAuthenticated(false);
+      localStorage.removeItem('authenticated');
     } catch (error) {
       console.error('Error signing out:', error);
       // Handle error as needed
