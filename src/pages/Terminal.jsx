@@ -2,7 +2,7 @@
 
 import React from 'react';
 //import PortfolioForm from '../Components/PortfolioForm';
-
+import Footer from '../../Components/Footer';
 const Terminal = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -27,11 +27,7 @@ const Terminal = () => {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-slate-950 to-fuchsia-900 p-4">
-        <div className="container mx-auto text-center text-white">
-          &copy; 2023 Tech Community. All rights reserved.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

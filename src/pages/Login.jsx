@@ -2,6 +2,10 @@ import { React, useState }  from 'react';
 import {signInWithGitHub, signInWithGoogle, signOutWithGoogle} from '../firebase';
 import { redirect } from 'react-router-dom';
 
+
+// import { useHistory } from 'react-router-dom';
+import Footer from '../../Components/Footer';
+
 const Login = () => {
   const [authenticated, setAuthenticated] = useState(false);
 
@@ -69,11 +73,7 @@ const Login = () => {
         </div>
   
         {/* Footer */}
-        <footer className="bg-gradient-to-r from-slate-950 to-fuchsia-900 p-4">
-          <div className="container mx-auto text-center text-white">
-            &copy; 2023 Tech Community. All rights reserved.
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
 

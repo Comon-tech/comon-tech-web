@@ -8,6 +8,8 @@ import { TbDeviceMobileCode } from "react-icons/tb";
 import { BiNetworkChart } from "react-icons/bi";
 import { AiOutlineCalendar, AiOutlineCode, AiFillGithub } from "react-icons/ai";
 import { FaCode, FaGitAlt, FaXTwitter, FaLinkedinIn, FaDiscord, FaGamepad } from "react-icons/fa6";
+import Footer from '../../Components/Footer';
+
 Modal.setAppElement('#root');
 
 const customStyles = {
