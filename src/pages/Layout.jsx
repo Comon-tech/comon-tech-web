@@ -9,6 +9,11 @@ import Footer from '../../Components/Footer';
 
 import openCommunicationImage from '../assets/open-communication.png';
 import women4cyber from '../assets/women4cyber.png';
+import ComonTechIcon from '../assets/comontech-logo-removebg.png'
+import OutBard from '../assets/outbard-transformed.png'
+import PyTextBin from '../assets/pytextbin-transformed.png'
+import numQuest from '../assets/numquest-transformed.png'
+import ComonStudy from '../assets/comonstudy.png'
 
 
 const Layout = () => {
@@ -44,14 +49,14 @@ const Layout = () => {
     <>
       <div className="min-h-screen flex flex-col">
       {/* Navigation Bar */}
-      <nav className="bg-gradient-to-r from-slate-950 to-fuchsia-900 p-4">
+      <nav className="bg-gradient-to-r from-[#fff] to-[#bc87c9] p-4">
         <div className="container mx-auto">
-          <a href="/" className="text-white font-bold text-xl">ComonTech</a>
+          <a href="/" className="text-white font-bold text-xl"><img src={ComonTechIcon} width={150}></img></a>
         </div>
       </nav>
 
       {/* Main Content */}
-      <div className=" h-[100vh] flex items-center justify-center bg-gradient-to-r from-slate-950 to-fuchsia-900 text-white">
+      <div className=" h-[100vh] flex items-center justify-center bg-gradient-to-r from-[#fff] to-[#bc87c9] text-slate-900">
         <div className="text-center">
           <h1 className="text-5xl font-bold mb-4">vibrant community dedicated to empowering self-taught developers.</h1>
           <p className="text-lg mb-8">
@@ -62,7 +67,7 @@ const Layout = () => {
             <a href="/home">Get Started</a>
           </button>
           ) : (
-            <button className="bg-white text-fuchsia-900 py-2 px-4 rounded-full">
+            <button className="text-white  bg-[#67009c] py-2 px-4 rounded-full">
             <a href="/login">Get Started</a>
           </button>
           ) }
@@ -111,6 +116,61 @@ const Layout = () => {
             <a href="/#">Learn More</a>
           </button>
             </div>
+          </div>
+
+          {/* our projects */}
+          <div  className="flex flex-col  bg-gradient-to-l from-[#fff] to-[#bc87c9] items-center justify-center mb-4">
+            <FaBuilding className="text-3xl mr-2 " />
+           <div >
+           <p className="text-lg">Our projects</p>
+           </div>
+           
+          
+
+            <div className="text-center items-center justify-center flex flex-col md:flex-row m-3">
+            <div className=" m-3 rounded-xl">
+              <a href="https://outbard.streamlit.app">
+            <img src={OutBard} className=" md:w-[200px] border-2 border-[#292230] m-3 rounded-xl">
+            </img>
+                OutBard
+                </a>
+                </div>
+
+                <div className=" m-3 rounded-xl">
+                <a href="http://pytextbin.comon.tech">
+            <img src={PyTextBin} className=" md:w-[200px] border-2 border-[#292230] m-3 rounded-xl"></img>
+            PyTextBin
+                </a>
+                </div>
+
+            <div className=" m-3 rounded-xl">
+            <a href="comon-tech.github.io/numQuest/">
+            <img src={numQuest} className=" md:w-[200px] rounded-xl"></img>
+            numQuest
+            </a>
+            </div>
+
+            <div className=" m-3 rounded-xl">
+            <a href="comon-study.streamlit.app">
+            <img src={ComonStudy} className=" md:w-[200px] border-2 border-[#292230 rounded-xl"></img>
+            ComonStudy
+            </a>
+            </div>
+
+            <div className=" m-3 rounded-xl">
+            <img src={OutBard} className=" md:w-[200px] border-2 border-[#292230]  rounded-xl"></img>
+            </div>
+
+            <div className=" m-3 rounded-xl">
+            <img src={PyTextBin} className=" md:w-[200px] border-2 border-[#292230]  rounded-xl"></img>
+            </div>
+
+            </div>
+             <div>
+            
+            <p className="text-lg text-center">Building a strong community with like-minded organizations.</p>
+           </div>
+          
           </div>
 
           {/* Our Partners */}
