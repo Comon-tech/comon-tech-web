@@ -88,7 +88,13 @@ const Layout = () => {
       </div>
 
           {/* Our Services */}
-          <div  className="h-[100vh] flex flex-col md:flex-row items-center justify-center p-4 bg-[#e1e1e1]">
+          <div className='flex flex-col p-4 bg-[#e1e1e1]'>
+          <div className='flex flex-col items-center justify-center'>
+            <FaHandsHelping className="text-3xl mr-2" />
+           <p className="text-lg">Our Services</p>
+           </div>
+          <div  className="flex flex-col md:flex-row items-center justify-center ">
+            
             <div className='flex flex-col items-center justify-between'>
            <div className='flex flex-row items-center'>
             
@@ -109,9 +115,17 @@ const Layout = () => {
 
           </div>
 
+          </div>
+
 
           {/* Our Goal */}
-          <div  className="h-[100vh] flex flex-col md:flex-row items-center justify-center p-4 ">
+          <div className='flex flex-col p-4 '>
+            <div className='flex flex-col items-center justify-center'>
+              <FaBullseye className="text-3xl mr-2" />
+            <p className="text-lg">Our Goal</p>
+            </div>
+          <div  className=" flex flex-col md:flex-row items-center justify-center p-4 ">
+          
           <div>
           <img src={openCommunicationImage}></img>
           </div>
@@ -129,6 +143,9 @@ const Layout = () => {
           </button>
             </div>
           </div>
+
+          </div>
+
 
           {/* our projects */}
           <div  className="flex flex-col  bg-gradient-to-l from-[#fff] to-[#bc87c9] items-center justify-center mb-4">
@@ -199,10 +216,20 @@ const Layout = () => {
 
           {/* Our Partners */}
           <div  className="flex flex-col  items-center justify-center mb-4">
+           <div className='flex flex-col items-center justify-center'>
             <FaBuilding className="text-3xl mr-2" />
-           <div >
            <p className="text-lg">Our Partners</p>
            </div>
+           
+           <div className="text-center items-center justify-center flex flex-col md:flex-row m-3">
+            <div className=" m-3 rounded-xl">
+              <a href="https://www.mbwebbers.tech/">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjjm04iWF9R9RO2yrEltQDW2rfDeouZ92Bxnywh3pWfFkWJ0Sa10sbAkt2z-X6EMsJpO5_yKmHt_b-332UJe94OGzDREZMaEVLcbAhlZQds27MYvy9Bu0zQ2eO5tE_BxlJuhkfrAoPLufbJ1nfhhW92rB7QtPjqUTr9tYQK1tvjKhbTJV50oy7YvQ60=s60" className=" md:w-[120px] border-2 border-[#292230] m-3 rounded-xl">
+            </img>
+                Mbwebers
+                </a>
+                </div>
+                </div>
            <div>
             <p className="text-lg text-center">Building a strong community with like-minded organizations.</p>
            </div>
@@ -210,7 +237,7 @@ const Layout = () => {
           </div>
 
           {/* Contact Information */}
-          <div  className="flex items-center justify-center mb-4">
+          <div  className="bg-[#292230] text-white  flex items-center justify-center">
           
 
             <FaRegEnvelope className="text-3xl mr-2" />
