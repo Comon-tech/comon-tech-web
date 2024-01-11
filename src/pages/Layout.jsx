@@ -192,13 +192,13 @@ const Layout = () => {
             </a>
             </div>
 
-            <div className=" m-3 rounded-xl">
+            {/* <div className=" m-3 rounded-xl">
             <img src={OutBard} className=" md:w-[200px] border-2 border-[#292230]  rounded-xl"></img>
             </div>
 
             <div className=" m-3 rounded-xl">
             <img src={PyTextBin} className=" md:w-[200px] border-2 border-[#292230]  rounded-xl"></img>
-            </div>
+            </div> */}
 
             </div>
              <div>
